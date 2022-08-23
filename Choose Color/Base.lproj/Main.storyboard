@@ -35,7 +35,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Настроить" id="vLq-lU-6PZ">
                             <color key="tintColor" red="0.89803922179999995" green="0.69019609689999994" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="NA7-0b-YQd" kind="show" id="M9A-s1-y6o"/>
+                                <segue destination="NA7-0b-YQd" kind="show" identifier="goEdit" id="M9A-s1-y6o"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

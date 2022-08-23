@@ -13,9 +13,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        defaultSettings()
     }
 
+    private func defaultSettings() {
+        mainView.layer.cornerRadius = 5
+        mainView.layer.masksToBounds = true
+        mainView.backgroundColor = UIColor(red: 255 / 255, green: 255 / 255, blue: 255 / 255, alpha: 1)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "goEdit" else { return }
+        
+        let vc = segue.destination as! EditViewController
+        
+        vc.sendingColor = mainView
+    }
 
 }
 
