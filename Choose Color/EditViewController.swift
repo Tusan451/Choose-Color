@@ -22,6 +22,9 @@ class EditViewController: UIViewController {
     @IBOutlet var okButton: UIButton!
     
     var editindViewColor: UIColor!
+    var redColor: CGFloat!
+    var greenColor: CGFloat!
+    var blueColor: CGFloat!
     
     var delegate: ViewControllerDelegate?
     
@@ -31,6 +34,8 @@ class EditViewController: UIViewController {
         defaultSettings()
         setColorForEditingColor()
         editingColor.backgroundColor = editindViewColor
+        setValuesForSliders()
+        setValuesForLabels()
 
     }
     
@@ -40,12 +45,15 @@ class EditViewController: UIViewController {
         
         redSlider.minimumValue = 0
         redSlider.maximumValue = 255
+        redSlider.value = 255
         
         greenSlider.minimumValue = 0
         greenSlider.maximumValue = 255
+        greenSlider.value = 255
         
         blueSlider.minimumValue = 0
         blueSlider.maximumValue = 255
+        blueSlider.value = 255
         
         okButton.layer.cornerRadius = 6
     }
@@ -54,8 +62,24 @@ class EditViewController: UIViewController {
         editingColor.backgroundColor = UIColor(red: CGFloat(redSlider.value) / 255, green: CGFloat(greenSlider.value) / 255, blue: CGFloat(blueSlider.value) / 255, alpha: 1)
     }
     
+    private func setValuesForSliders() {
+        if redColor != nil {
+            redSlider.value = Float(redColor * 255)
+            greenSlider.value = Float(greenColor * 255)
+            blueSlider.value = Float(blueColor * 255)
+        }
+    }
+    
+    private func setValuesForLabels() {
+        if redColor != nil {
+            redTextLabel.text = String(Int(redColor * 255))
+            greenTextLabel.text = String(Int(greenColor * 255))
+            blueTextLabel.text = String(Int(blueColor * 255))
+        }
+    }
+    
     @IBAction func okButtonAction() {
-        delegate?.updateColor(viewColor: editingColor.backgroundColor!)
+        delegate?.updateColor(viewColor: editingColor.backgroundColor!, rColor: CGFloat(redSlider.value) / 255, gColor: CGFloat(greenSlider.value) / 255, bColor: CGFloat(blueSlider.value) / 255)
         self.navigationController?.popViewController(animated: true)
     }
     

@@ -9,5 +9,5 @@ import CoreGraphics
 import UIKit
 
 protocol ViewControllerDelegate {
-    func updateColor(viewColor: UIColor)
+    func updateColor(viewColor: UIColor, rColor: CGFloat, gColor: CGFloat, bColor: CGFloat)
 }

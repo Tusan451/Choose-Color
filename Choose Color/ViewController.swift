@@ -11,9 +11,16 @@ class ViewController: UIViewController, ViewControllerDelegate {
     
     @IBOutlet var mainView: UIView!
     
-    func updateColor(viewColor: UIColor) {
+    func updateColor(viewColor: UIColor, rColor: CGFloat, gColor: CGFloat, bColor: CGFloat) {
         mainView.backgroundColor = viewColor
+        red = rColor
+        green = gColor
+        blue = bColor
     }
+    
+    var red: CGFloat!
+    var green: CGFloat!
+    var blue: CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +37,9 @@ class ViewController: UIViewController, ViewControllerDelegate {
         guard segue.identifier == "goEdit" else { return }
         if let vc2 = segue.destination as? EditViewController {
             vc2.editindViewColor = mainView.backgroundColor
+            vc2.redColor = red
+            vc2.greenColor = green
+            vc2.blueColor = blue
             vc2.delegate = self
         }
     }
