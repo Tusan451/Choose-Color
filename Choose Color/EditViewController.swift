@@ -19,35 +19,48 @@ class EditViewController: UIViewController {
     @IBOutlet var greenTextLabel: UILabel!
     @IBOutlet var blueTextLabel: UILabel!
     
-    var sendingColor: UIView!
+    @IBOutlet var okButton: UIButton!
+    
+    var redSliderColor: Float!
+    var greenSliderColor: Float!
+    var blueSliderColor: Float!
+    
+    var delegate: ViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         defaultSettings()
+        setColorForEditingColor()
 
     }
     
     private func defaultSettings() {
-        editingColor.backgroundColor = sendingColor.backgroundColor
         editingColor.layer.cornerRadius = 8
         editingColor.layer.masksToBounds = true
         
         redSlider.minimumValue = 0
         redSlider.maximumValue = 255
-        redSlider.value = 255
+        redSlider.value = redSliderColor
         
         greenSlider.minimumValue = 0
         greenSlider.maximumValue = 255
-        greenSlider.value = 255
+        greenSlider.value = greenSliderColor
         
         blueSlider.minimumValue = 0
         blueSlider.maximumValue = 255
-        blueSlider.value = 255
+        blueSlider.value = blueSliderColor
+        
+        okButton.layer.cornerRadius = 6
     }
     
     private func setColorForEditingColor() {
         editingColor.backgroundColor = UIColor(red: CGFloat(redSlider.value) / 255, green: CGFloat(greenSlider.value) / 255, blue: CGFloat(blueSlider.value) / 255, alpha: 1)
+    }
+    
+    @IBAction func okButtonAction() {
+        delegate?.updateColors(redColor: CGFloat(redSlider.value), greenColor: CGFloat(greenSlider.value), blueColor: CGFloat(blueSlider.value))
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func sliderAction(_ sender: UISlider) {
@@ -68,19 +81,5 @@ class EditViewController: UIViewController {
         default:
             break
         }
-        
     }
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

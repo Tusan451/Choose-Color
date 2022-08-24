@@ -14,6 +14,7 @@
 		E033A76628B5287000C80496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E033A76528B5287000C80496 /* Assets.xcassets */; };
 		E033A76928B5287000C80496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E033A76728B5287000C80496 /* LaunchScreen.storyboard */; };
 		E033A77128B5328A00C80496 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E033A77028B5328A00C80496 /* EditViewController.swift */; };
+		E092DEC528B6465C0085CC1B /* ViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E092DEC428B6465C0085CC1B /* ViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E033A76828B5287000C80496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E033A76A28B5287000C80496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E033A77028B5328A00C80496 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		E092DEC428B6465C0085CC1B /* ViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				E033A75E28B5286F00C80496 /* SceneDelegate.swift */,
 				E033A76028B5286F00C80496 /* ViewController.swift */,
 				E033A77028B5328A00C80496 /* EditViewController.swift */,
+				E092DEC428B6465C0085CC1B /* ViewControllerDelegate.swift */,
 				E033A76228B5286F00C80496 /* Main.storyboard */,
 				E033A76528B5287000C80496 /* Assets.xcassets */,
 				E033A76728B5287000C80496 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E092DEC528B6465C0085CC1B /* ViewControllerDelegate.swift in Sources */,
 				E033A77128B5328A00C80496 /* EditViewController.swift in Sources */,
 				E033A76128B5286F00C80496 /* ViewController.swift in Sources */,
 				E033A75D28B5286F00C80496 /* AppDelegate.swift in Sources */,

@@ -157,13 +157,30 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhM-gi-hV0">
+                                <rect key="frame" x="20" y="520" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tqu-ML-WgF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Готово"/>
+                                <connections>
+                                    <action selector="okButtonAction" destination="NA7-0b-YQd" eventType="touchUpInside" id="dLn-U3-gIy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fpb-Px-KMQ"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Fpb-Px-KMQ" firstAttribute="trailing" secondItem="PDi-Ed-5Th" secondAttribute="trailing" constant="20" id="7vS-Ak-6IC"/>
                             <constraint firstItem="PDi-Ed-5Th" firstAttribute="leading" secondItem="Fpb-Px-KMQ" secondAttribute="leading" constant="20" id="Jfe-X0-30c"/>
+                            <constraint firstItem="YhM-gi-hV0" firstAttribute="top" secondItem="RnB-ML-8PS" secondAttribute="bottom" constant="40" id="LlL-W4-wcE"/>
+                            <constraint firstItem="YhM-gi-hV0" firstAttribute="leading" secondItem="Fpb-Px-KMQ" secondAttribute="leading" constant="20" id="MPr-vN-Hkw"/>
                             <constraint firstItem="RnB-ML-8PS" firstAttribute="leading" secondItem="Fpb-Px-KMQ" secondAttribute="leading" constant="20" id="PkI-K3-Lio"/>
+                            <constraint firstItem="Fpb-Px-KMQ" firstAttribute="trailing" secondItem="YhM-gi-hV0" secondAttribute="trailing" constant="20" id="bbU-Bg-mYN"/>
                             <constraint firstItem="Fpb-Px-KMQ" firstAttribute="trailing" secondItem="RnB-ML-8PS" secondAttribute="trailing" constant="20" id="cPc-0Y-69h"/>
                             <constraint firstItem="PDi-Ed-5Th" firstAttribute="top" secondItem="Fpb-Px-KMQ" secondAttribute="top" constant="20" id="ddO-DY-UgI"/>
                             <constraint firstItem="RnB-ML-8PS" firstAttribute="top" secondItem="PDi-Ed-5Th" secondAttribute="bottom" constant="32" id="y8b-hj-Vrn"/>
@@ -176,13 +193,14 @@
                         <outlet property="editingColor" destination="PDi-Ed-5Th" id="8Vp-TC-v0h"/>
                         <outlet property="greenSlider" destination="ayB-Nl-Ta2" id="nzh-qr-F60"/>
                         <outlet property="greenTextLabel" destination="LNz-4v-TES" id="gvi-GZ-Y0A"/>
+                        <outlet property="okButton" destination="YhM-gi-hV0" id="lwa-ry-jqC"/>
                         <outlet property="redSlider" destination="8A5-yD-d9T" id="jcM-Qu-Rwr"/>
                         <outlet property="redTextLabel" destination="ANW-1m-15e" id="vG8-N5-HDD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMM-hh-8Qf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1818.840579710145" y="69.642857142857139"/>
+            <point key="canvasLocation" x="1887" y="70"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1WK-5I-Ksn">
