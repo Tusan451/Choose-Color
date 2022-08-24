@@ -21,9 +21,7 @@ class EditViewController: UIViewController {
     
     @IBOutlet var okButton: UIButton!
     
-    var redSliderColor: Float!
-    var greenSliderColor: Float!
-    var blueSliderColor: Float!
+    var editindViewColor: UIColor!
     
     var delegate: ViewControllerDelegate?
     
@@ -32,6 +30,7 @@ class EditViewController: UIViewController {
         
         defaultSettings()
         setColorForEditingColor()
+        editingColor.backgroundColor = editindViewColor
 
     }
     
@@ -41,15 +40,12 @@ class EditViewController: UIViewController {
         
         redSlider.minimumValue = 0
         redSlider.maximumValue = 255
-        redSlider.value = redSliderColor
         
         greenSlider.minimumValue = 0
         greenSlider.maximumValue = 255
-        greenSlider.value = greenSliderColor
         
         blueSlider.minimumValue = 0
         blueSlider.maximumValue = 255
-        blueSlider.value = blueSliderColor
         
         okButton.layer.cornerRadius = 6
     }
@@ -59,7 +55,7 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func okButtonAction() {
-        delegate?.updateColors(redColor: CGFloat(redSlider.value), greenColor: CGFloat(greenSlider.value), blueColor: CGFloat(blueSlider.value))
+        delegate?.updateColor(viewColor: editingColor.backgroundColor!)
         self.navigationController?.popViewController(animated: true)
     }
     

@@ -6,7 +6,8 @@
 //
 
 import CoreGraphics
+import UIKit
 
 protocol ViewControllerDelegate {
-    func updateColors(redColor: CGFloat, greenColor: CGFloat, blueColor: CGFloat)
+    func updateColor(viewColor: UIColor)
 }
