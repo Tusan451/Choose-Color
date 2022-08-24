@@ -26,7 +26,7 @@ class EditViewController: UIViewController {
     var greenColor: CGFloat!
     var blueColor: CGFloat!
     
-    var delegate: ViewControllerDelegate?
+    weak var delegate: ViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

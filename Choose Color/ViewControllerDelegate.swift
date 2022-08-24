@@ -8,6 +8,6 @@
 import CoreGraphics
 import UIKit
 
-protocol ViewControllerDelegate {
+protocol ViewControllerDelegate: AnyObject {
     func updateColor(viewColor: UIColor, rColor: CGFloat, gColor: CGFloat, bColor: CGFloat)
 }
